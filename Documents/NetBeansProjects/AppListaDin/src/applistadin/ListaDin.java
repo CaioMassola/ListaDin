@@ -15,4 +15,24 @@ public class ListaDin {
     public boolean isEmpty(){
        return inicio == null; 
     }
+    
+    public Aluno getInicio() throws CloneNotSupportedException{
+        return inicio.getItem(); 
+    }
+    
+    public void insereInicio(String nome, int ra){
+        //cria o novo no a ser inserido na lista
+        Aluno a = new Aluno(nome, ra);
+        No novoNo = new No(a);
+        
+        
+        //aponta o proximo do novo no para o inicio da lista 
+        novoNo.setProximo(inicio);
+        
+       
+        //aponta o inicio da lista para o novoNo inserido
+        inicio = novoNo;
+    }
+    
+    
 }

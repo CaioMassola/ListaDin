@@ -5,6 +5,7 @@
  */
 package test;
 
+import applistadin.Aluno;
 import applistadin.ListaDin;
 import org.junit.Assert;
 import org.junit.Test;
@@ -22,5 +23,18 @@ public class ListaDinTest {
       ListaDin l = new ListaDin();
       Assert.assertTrue(l.isEmpty());
   }
+  @Test
+  
+  public void testInserirNoInicio() throws CloneNotSupportedException{
+      ListaDin l = new ListaDin();
+      l.insereInicio("Marcos", 12345);
+     
+      l.insereInicio("Joao", 555555);
+       Aluno a = l.getInicio();
+      Assert.assertEquals("Joao", a.getNome());
+      
+  }
+  
+  
     
 }
