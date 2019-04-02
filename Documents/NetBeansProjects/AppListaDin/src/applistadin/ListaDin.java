@@ -34,5 +34,14 @@ public class ListaDin {
         inicio = novoNo;
     }
     
+    public String show(){
+        No aux = inicio;
+        String saida = "";
+        while(aux != null){
+            saida += aux.getAluno().getNome();
+            aux = aux.getProximo();
+        }
+        
     
+    return saida;
 }

@@ -22,9 +22,14 @@ public class No {
     public Aluno getItem() throws CloneNotSupportedException{
         return (Aluno)aluno.clone();
     }
+     protected Aluno getAluno() {
+        return aluno;
+    }
     
     public void setProximo(No no){
         proximo = no;
     }
-            
+    public Aluno getProximo(){
+        return proximo;
+    }  
 }

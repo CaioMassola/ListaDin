@@ -34,6 +34,17 @@ public class ListaDinTest {
       Assert.assertEquals("Joao", a.getNome());
       
   }
+  @Test
+  public void exibirNomesDaLista()throws CloneNotSupportedException{
+      ListaDin l = new ListaDin();
+      l.insereInicio("a", 345);
+      l.insereInicio("b", 2345);
+      l.insereInicio("c", 145);
+      String alunos = l.show();
+      Assert.assertEquals("b", "a", "b", a.getNome(),b.getNome(), c.GetNome());
+      
+      
+  }
   
   
     
